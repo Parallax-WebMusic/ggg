@@ -1,0 +1,91 @@
+@keyframes hero-off {
+    from{filter: brightness(100%) blur(0);}
+    to{filter: brightness(50%) blur(20px);}
+}
+@keyframes hreo-on {
+    from{filter: brightness(50%) blur(20px);}
+    to{filter: brightness(100%) blur(0);}
+}
+.navbar-menu{
+    position: fixed;
+    z-index: -999;
+}
+.navbar-menu, .menu-opened{
+    width: 100%;
+    height: 100%;
+}
+.menu-opened{
+    transform: translate(100%);
+    background: #0000007f;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: column;
+}
+.menu-openAnim{
+    animation: openAnim .5s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes openAnim{
+    from{transform: translate(100%);}
+    to{transform: translate(0);}
+}
+.menu-closeAnim{
+    animation: closeAnim .5s ease-in;
+    animation-fill-mode: both;
+}
+@keyframes closeAnim{
+    from{transform: translate(0);}
+    to{transform: translate(100%);}
+}
+.menu-navbar{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 1vh;
+}
+.linked-map{
+    width: 90%;
+    height: 30%;
+    margin-top: 15vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.map-link{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1vh;
+    padding-left: 5vw;
+    border-radius: 1.5vh;
+    transition: .2s;
+}
+.map-link:hover{
+    color: #727272;
+}
+.fillerScrollDown{
+    animation: fScrollDown .3s;
+    animation-fill-mode: both;
+}
+@keyframes fScrollDown{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+.fillerScrollUp{
+    animation: fScrollUp .3s;
+    animation-fill-mode: both;
+}
+@keyframes fScrollUp{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.inJsMainContent .movingImage, .inJsMainContent .movingImageV1{
+    width: 50vw;
+    height: auto;
+}
